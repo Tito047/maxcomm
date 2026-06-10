@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Maxcomm Mechanical Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .text-brand { color: #1a6b66; }
+        .bg-brand { background-color: #1a6b66; }
+        .hover-bg-brand:hover { background-color: #13524e; }
+        
+        /* Subtle fade-in animations for a premium feel */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .fade-in-delayed {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.4s forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-white to-gray-100 relative overflow-hidden">
+
+    <!-- Subtle Technical Background Texture Overlay -->
+    <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')] opacity-[0.03] pointer-events-none"></div>
+    
+    <!-- Decorative Glowing Ambient Orb -->
+    <div class="absolute w-[500px] h-[500px] bg-brand/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+    <!-- Main Splash Container -->
+    <div class="z-10 text-center max-w-2xl px-6 flex flex-col items-center justify-center">
+        
+        <!-- Animated Brand Header Stack -->
+        <div class="fade-in-up flex flex-col items-center leading-none uppercase tracking-tight mb-8">
+            <span class="font-black text-4xl md:text-5xl text-gray-900 tracking-tight">Maxcomm</span>
+            <span class="text-xs font-bold tracking-[0.3em] text-gray-500 uppercase mt-3">Mechanical Solutions</span>
+        </div>
+
+        <!-- Decorative Divider Line -->
+        <div class="fade-in-up w-12 h-[2px] bg-brand/30 mb-8"></div>
+
+        <!-- Welcome Greeting Panel -->
+        <div class="fade-in-delayed mb-12">
+            <h1 class="text-xl md:text-2xl font-medium text-gray-600 tracking-wide mb-3">Welcome</h1>
+            <p class="text-xs md:text-sm text-gray-400 max-w-md mx-auto font-medium leading-relaxed">
+                Step into our high-fidelity manufacturing pipeline where memories are preserved with micrometer precision.
+            </p>
+        </div>
+
+        <!-- Interactive Enter Button Linking to main.html -->
+        <div class="fade-in-delayed">
+            <a href="main.html" class="inline-flex items-center gap-3 bg-brand hover-bg-brand text-white font-bold text-sm tracking-widest uppercase px-10 py-4 rounded-xl shadow-xl shadow-teal-900/10 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                Enter Site <i class="fa-solid fa-chevron-right text-xs transition-transform group-hover:translate-x-1"></i>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Tech Footer Note -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] text-gray-400 font-bold uppercase tracking-widest z-10 text-center w-full px-4">
+        Exclusively Driven by Bambu Lab Precision Systems
+    </div>
+
+</body>
+</html>

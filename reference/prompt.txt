@@ -1,0 +1,23 @@
+Role: Expert UI/UX Designer and Marketing Copywriter.
+Task: Generate a premium [Select: 4-panel collage OR website landing page] for a custom 3D portrait business.
+Assets Provided: [Ensure you upload: 1. Reference Photo, 2. Digital 3D Model, 3. Finished Print, 4. Macro Texture Close-up].
+
+Design & Layout Rules:
+
+Style: Clean, modern, and premium (treat the product as high-end heirloom art).
+
+Structure: Chronological visual progression demonstrating the exact workflow.
+
+Required Labels: "Original Photo Reference", "Digital 3D Design", "Finished Physical Print", "Micro-Detail Texture".
+
+Required Copywriting & Technical Claims:
+
+Primary Headline: "Your Likeness, Captured with Hair-Strand Precision."
+
+Specs: Highlight "Micron-Level Precision (200µm)" and "ultra-fine 50-micron layers."
+
+Analogy: Explicitly relate the 200µm accuracy to the "thickness of a single human hair."
+
+Hardware: State the exclusive use of "100% Bambu Lab printers".
+
+Corporate Tie: Note the service operates independently as Personal Sculpt 3D, but include a subtle footer stating it is "Backed by Maxcomm Solutions."

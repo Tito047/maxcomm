@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Maxcomm Mechanical Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .text-brand { color: #1a6b66; }
+        .bg-brand { background-color: #1a6b66; }
+        .hover-bg-brand:hover { background-color: #13524e; }
+        .border-brand { border-color: #1a6b66; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
+            <!-- Header Logo -->
+            <a href="main.html" class="flex flex-col leading-none hover:opacity-80 transition-opacity">
+                <span class="font-extrabold text-2xl tracking-tight text-gray-900 uppercase">Maxcomm</span>
+                <span class="text-[10px] font-bold tracking-widest text-gray-600 uppercase mt-1">Mechanical Solutions</span>
+            </a>
+            
+            <!-- Navigation Links (Matches image_a68d82.jpg with Contact Active) -->
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
+                <a href="main.html" class="hover:text-gray-900 transition-colors">Home</a>
+                <a href="Our_process.html" class="hover:text-gray-900 transition-colors">Our Process</a>
+                <a href="FAQ.html" class="hover:text-gray-900 transition-colors">FAQ</a>
+                <a href="Contact.html" class="text-gray-900 border-b-2 border-brand pb-1">Contact</a>
+                <a href="Testimonials.html" class="hover:text-gray-900 transition-colors">Testimonials</a>
+            </div>
+
+            <!-- Get Quote Call To Action -->
+            <a href="quote.html" class="inline-block text-center bg-brand hover-bg-brand text-white px-6 py-2.5 rounded-md font-bold text-sm transition-colors shadow-md">
+                GET QUOTE
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-20 pb-10 bg-white text-center px-4">
+        <div class="container mx-auto max-w-3xl">
+            <span class="text-brand font-bold tracking-widest text-xs uppercase mb-3 block">Get In Touch</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Connect With Our Team</h1>
+            <p class="text-lg text-gray-500 leading-relaxed">
+                Have an inquiry about a custom project, bulk ordering, or architectural modeling configurations? We're here to assist.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Contact Split Layout Section -->
+    <section class="py-12 pb-24 bg-white flex-grow">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+                
+                <!-- Left Column: Informational Cards (2/5 layout space) -->
+                <div class="lg:col-span-2 space-y-6">
+                    
+                    <!-- Email Card -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200/60 flex items-start gap-4 shadow-xs">
+                        <div class="p-3 bg-brand/10 text-brand rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-sm uppercase tracking-wider mb-1">Email Database</h3>
+                            <p class="text-sm text-gray-400 mb-2">Drop your reference assets or message anytime.</p>
+                            <a href="mailto:support@maxcomm.com" class="font-semibold text-brand hover:underline text-base break-all">support@maxcomm.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Phone Card -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200/60 flex items-start gap-4 shadow-xs">
+                        <div class="p-3 bg-brand/10 text-brand rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-sm uppercase tracking-wider mb-1">Direct Help Desk</h3>
+                            <p class="text-sm text-gray-400 mb-2">Mon - Sat, 9:00 AM to 6:00 PM IST</p>
+                            <a href="tel:+919876543210" class="font-semibold text-brand hover:underline text-base">+91 98765 43210</a>
+                        </div>
+                    </div>
+
+                    <!-- Address Card -->
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200/60 flex items-start gap-4 shadow-xs">
+                        <div class="p-3 bg-brand/10 text-brand rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 text-sm uppercase tracking-wider mb-1">Headquarters Address</h3>
+                            <p class="text-sm text-gray-600 leading-relaxed mt-2 font-medium">
+                                Maxcomm Mechanical Solutions,<br>
+                                4th Floor, Tech Hub Arena, Phase 2,<br>
+                                Electronics City, Bangalore,<br>
+                                Karnataka - 560100, India
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Interactive Drop Box Component (3/5 layout space) -->
+                <div class="lg:col-span-3 bg-gray-50 border border-gray-200 rounded-[2rem] p-8 md:p-10 shadow-sm relative overflow-hidden">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Send an Instant Message</h2>
+                    <p class="text-sm text-gray-500 mb-8">Our processing technicians typically respond within 12 to 24 hours.</p>
+                    
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Your Name</label>
+                                <input type="text" placeholder="John Doe" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand transition-colors shadow-inner" required />
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Email Address</label>
+                                <input type="email" placeholder="john@example.com" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand transition-colors shadow-inner" required />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Subject Matter</label>
+                            <input type="text" placeholder="Custom 3D Print Quote Request" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand transition-colors shadow-inner" required />
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Message Description</label>
+                            <textarea rows="5" placeholder="Outline your dynamic print criteria or processing specifications here..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand transition-colors shadow-inner resize-none" required></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full text-center bg-brand hover-bg-brand text-white font-bold text-sm py-4 rounded-xl transition-all shadow-lg shadow-teal-900/10 tracking-wider uppercase">
+                            Dispatch Inquiry Line <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions Continuity Checklist Footer Banner -->
+    <section class="py-16 bg-gray-50 border-t border-gray-200 mt-auto">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center group">
+                    <div class="text-brand text-3xl mb-4 group-hover:-translate-y-1 transition-transform">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-sm">BAMBU LAB<br>EXCLUSIVE</h4>
+                </div>
+                
+                <div class="flex flex-col items-center text-center group">
+                    <div class="text-brand text-3xl mb-4 group-hover:-translate-y-1 transition-transform">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-sm">Vertex-Level<br>Detail</h4>
+                </div>
+
+                <div class="flex flex-col items-center text-center group">
+                    <div class="text-brand text-3xl mb-4 group-hover:-translate-y-1 transition-transform">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-sm">Micrometer<br>Accuracy</h4>
+                </div>
+
+                <div class="flex flex-col items-center text-center group">
+                    <div class="text-brand text-3xl mb-4 group-hover:-translate-y-1 transition-transform">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-sm">Custom Prints<br>From Rs 499</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

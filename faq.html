@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Maxcomm Mechanical Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .text-brand { color: #1a6b66; }
+        .bg-brand { background-color: #1a6b66; }
+        
+        /* Custom styling to hide the default dropdown arrow and animate */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
+            <a href="main.html" class="flex flex-col leading-none hover:opacity-80 transition-opacity">
+                <span class="font-extrabold text-2xl tracking-tight text-gray-900 uppercase">Maxcomm</span>
+                <span class="text-[10px] font-bold tracking-widest text-gray-600 uppercase mt-1">Mechanical Solutions</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
+                <a href="main.html" class="hover:text-gray-900 transition-colors">Home</a>
+                <a href="Our_process.html" class="hover:text-gray-900 transition-colors">Our Process</a>
+                <a href="FAQ.html" class="text-gray-900 border-b-2 border-brand pb-1">FAQ</a>
+                <a href="Contact.html" class="hover:text-gray-900 transition-colors">Contact</a>
+                <a href="Testimonials.html" class="hover:text-gray-900 transition-colors">Testimonials</a>
+            </div>
+
+            <a href="quote.html" class="inline-block text-center bg-brand hover:bg-[#13524e] text-white px-6 py-2.5 rounded-md font-bold text-sm transition-colors shadow-md">
+                GET QUOTE
+            </a>
+        </div>
+    </nav>
+
+    <!-- FAQ Header -->
+    <section class="pt-20 pb-10 bg-gradient-to-b from-white to-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Frequently Asked Questions</h1>
+            <p class="text-lg text-gray-600">Everything you need to know about our custom 3D printed busts, policies, and process.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section class="py-16 bg-gray-50 flex-grow">
+        <div class="container mx-auto px-6 max-w-3xl space-y-4">
+
+            <!-- Question 1 -->
+            <details class="bg-white rounded-2xl shadow-sm border border-gray-200 group overflow-hidden">
+                <summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none p-6 text-lg hover:text-brand transition-colors">
+                    <span>What kind of photos do I need to provide?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180 text-brand">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+                    To create an accurate 3D model, we require at least 4 clear, well-lit photos of the subject's face: one directly from the front, one from the left profile, one from the right profile, and one from the back. Ensure the subject's hair is visible and not heavily obscured.
+                </div>
+                <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+                    If the subject is not available. We need videos and pictures covering the subject roughly. Our animators will use sketching tools and AI tools to reconstruct the 3D model of the subject.
+            </details>
+
+            <!-- Question 2 -->
+            <details class="bg-white rounded-2xl shadow-sm border border-gray-200 group overflow-hidden">
+                <summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none p-6 text-lg hover:text-brand transition-colors">
+                    <span>What materials and printers do you use?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180 text-brand">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+                    We exclusively utilize the Bambu Lab A1 3D printing system alongside premium PLA filaments. This setup allows us to achieve incredibly smooth surface finishes, high-fidelity vertex rendering, and micrometer dimensional accuracy that standard printers simply cannot match.
+                </div>
+            </details>
+
+            <!-- Question 3 -->
+            <details class="bg-white rounded-2xl shadow-sm border border-gray-200 group overflow-hidden">
+                <summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none p-6 text-lg hover:text-brand transition-colors">
+                    <span>Will I get to see the design before it is printed?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180 text-brand">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+                    Absolutely. Before we start the physical manufacturing process, we will send you a digital 3D preview of the sculpted model. We only proceed to the printing stage once you have explicitly approved the design.
+                </div>
+            </details>
+
+            <!-- Question 4 -->
+            <details class="bg-white rounded-2xl shadow-sm border border-gray-200 group overflow-hidden">
+                <summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none p-6 text-lg hover:text-brand transition-colors">
+                    <span>How do shipping and COD fees work?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180 text-brand">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+                    Prepaid orders valued over Rs 1,000 enjoy entirely free shipping. Orders under Rs 1,000 carry a standard Rs 150 shipping fee. If you choose Cash on Delivery (COD), an additional Rs 150 convenience handling fee is applied by our delivery partners.
+                </div>
+            </details>
+
+            <!-- Question 5 -->
+            <details class="bg-white rounded-2xl shadow-sm border border-gray-200 group overflow-hidden">
+                <summary class="flex justify-between items-center font-bold text-gray-900 cursor-pointer list-none p-6 text-lg hover:text-brand transition-colors">
+                    <span>What is your cancellation and return policy?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180 text-brand">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+                    If you choose not to approve the 3D digital preview, we will cancel your order and issue a full refund immediately. However, because each bust is a personalized, custom-manufactured item, <strong>no cancellations, modifications, or returns are accepted once the 3D preview is approved</strong> and production begins.
+                </div>
+            </details>
+
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="bg-white py-12 border-t border-gray-200 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Still have questions?</h3>
+        <p class="text-gray-600 mb-6">We're here to help you preserve your memories.</p>
+        <a href="Contact.html" class="inline-block bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-bold transition-colors">
+            Contact Support
+        </a>
+    </section>
+
+</body>
+</html>

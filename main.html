@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxcomm Mechanical Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .text-brand { color: #1a6b66; }
+        .bg-brand { background-color: #1a6b66; }
+        .hover-bg-brand:hover { background-color: #13524e; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
+            <!-- Header Logo Links to Home Page -->
+            <a href="main.html" class="flex flex-col leading-none hover:opacity-80 transition-opacity">
+                <span class="font-extrabold text-2xl tracking-tight text-gray-900 uppercase">Maxcomm</span>
+                <span class="text-[10px] font-bold tracking-widest text-gray-600 uppercase mt-1">Mechanical Solutions</span>
+            </a>
+            
+            <!-- Updated Navigation Taskbar Buttons (Portfolio and USP Removed) -->
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
+                <a href="main.html" class="text-gray-900 border-b-2 border-brand pb-1">Home</a>
+                <a href="Our_process.html" class="hover:text-gray-900 transition-colors">Our Process</a>
+                <a href="FAQ.html" class="hover:text-gray-900 transition-colors">FAQ</a>
+                <a href="Contact.html" class="hover:text-gray-900 transition-colors">Contact</a>
+                <a href="Testimonials.html" class="hover:text-gray-900 transition-colors">Testimonials</a>
+            </div>
+
+            <!-- Get Quote Call To Action Link -->
+            <a href="quote.html" class="inline-block text-center bg-brand hover-bg-brand text-white px-6 py-2.5 rounded-md font-bold text-sm transition-colors shadow-md">
+                GET QUOTE
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Showcase Section -->
+    <section class="relative bg-gradient-to-br from-white to-gray-100 overflow-hidden">
+        <div class="container mx-auto px-6 py-16 md:py-24 max-w-7xl flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 z-10">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900 mb-6 uppercase tracking-tight">
+                    Preserving moments <br class="hidden lg:block"> with hair-strand precision.
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
+                    From original photos to tactile heirloom sculptures. Crafted with <strong>micrometer</strong> precision using <strong>Bambu Lab printers</strong>. Starting at only <span class="font-extrabold text-brand">Rs 499</span>.
+                </p>
+                <a href="quote.html" class="inline-block text-center bg-brand hover-bg-brand text-white px-8 py-3.5 rounded-md font-bold text-sm transition-colors shadow-lg shadow-teal-900/20">
+                    START YOUR CUSTOM PROJECT
+                </a>
+            </div>
+            
+            <div class="md:w-1/2 w-full z-10">
+                <img src="./images/Product/jagadish.jpeg" alt="Original Photo to Custom 3D Bust Reference" class="w-full h-auto rounded-xl shadow-2xl">
+            </div>
+            
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')] opacity-[0.03] pointer-events-none"></div>
+        </div>
+    </section>
+
+    <!-- Process Flow Information Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-extrabold text-center mb-16 text-gray-900">The Maxcomm Process</h2>
+            
+            <div class="relative">
+                <div class="hidden md:block absolute top-8 left-[10%] right-[10%] h-[2px] bg-gray-300 z-0"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 shadow-md flex items-center justify-center text-brand text-2xl mb-4">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">1. Provide Photo</h3>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 shadow-md flex items-center justify-center text-brand text-2xl mb-4">
+                            <i class="fa-solid fa-paint-brush"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-4">2. High-Fidelity 3D Modeling</h3>
+                        <img src="./images/Product/pandey1.jpeg" alt="Digital 3D Design Layout Phase" class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 shadow-md flex items-center justify-center text-brand text-2xl mb-4">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-2">3. Bambu Lab Printing</h3>
+                        <p class="text-sm text-gray-600 mt-2">Exclusively Bambu<br>Lab Precision</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-white border-4 border-gray-100 shadow-md flex items-center justify-center text-brand text-2xl mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-900 mb-4">4. Finished Masterpiece</h3>
+                        <img src="./images/Product/pandey.jpeg" alt="Finished High-Fidelity Filament Model Output" class="w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions Checklist Section -->
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <h2 class="text-3xl font-extrabold text-center mb-12 text-gray-900">Unmatched Quality & Precision</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="text-brand text-4xl mb-4">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-sm md:text-base">100% BAMBU LAB<br>EXCLUSIVE</h4>
+                </div>
+                
+                <div class="flex flex-col items-center text-center">
+                    <div class="text-brand text-4xl mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-sm md:text-base">Vertex-Level Detail</h4>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div class="text-brand text-4xl mb-4">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-sm md:text-base">Dimensional Accuracy</h4>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div class="text-brand text-4xl mb-4">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-900 text-sm md:text-base">Prints From 499</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

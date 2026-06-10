@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote - Maxcomm Mechanical Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; }
+        .text-brand { color: #1a6b66; }
+        .bg-brand { background-color: #1a6b66; }
+        .hover-bg-brand:hover { background-color: #13524e; }
+        
+        input[type=range] {
+            accent-color: #1a6b66;
+        }
+        
+        /* Remove arrows from number input */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
+            <a href="main.html" class="flex flex-col leading-none hover:opacity-80 transition-opacity">
+                <span class="font-extrabold text-2xl tracking-tight text-gray-900 uppercase">Maxcomm</span>
+                <span class="text-[10px] font-bold tracking-widest text-gray-600 uppercase mt-1">Mechanical Solutions</span>
+            </a>
+            
+            <a href="main.html" class="text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <section class="flex-grow flex items-center justify-center px-4 py-8 md:py-12 bg-gradient-to-br from-white to-gray-100 relative overflow-hidden">
+        
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')] opacity-[0.03] pointer-events-none"></div>
+
+        <div class="bg-white rounded-[2rem] shadow-2xl p-8 md:p-16 w-11/12 max-w-7xl z-10 border border-gray-100">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">Design Your Custom Bust</h1>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">Slide the dial to select your size and see a real-time scale estimate.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <div class="flex flex-col justify-center">
+                    <div class="bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-200 mb-8 shadow-inner">
+                        <div class="flex justify-between items-end mb-8">
+                            <label for="dimensionSlider" class="font-bold text-gray-700 text-xl">Select Height:</label>
+                            <div class="text-4xl font-black text-brand"><span id="sizeValue">10</span> cm</div>
+                        </div>
+
+                        <input 
+                            type="range" 
+                            id="dimensionSlider" 
+                            min="5" 
+                            max="25" 
+                            step="1" 
+                            value="10" 
+                            class="w-full h-3 bg-gray-300 rounded-lg appearance-none cursor-pointer mb-8"
+                        >
+                        
+                        <div class="flex justify-between text-sm font-bold text-gray-400 px-1">
+                            <span>5 cm</span>
+                            <span>25 cm</span>
+                        </div>
+
+                        <div class="mt-10 flex items-center gap-6 bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="text-brand text-3xl">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 font-bold uppercase tracking-wider">Bounding Cube Format</p>
+                                <p class="text-xl font-extrabold text-gray-900 mt-1" id="cubeValue">10 cm × 10 cm × 10 cm</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 flex items-center justify-between bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                            <label for="qtyInput" class="font-bold text-gray-700 text-lg pl-2">Quantity:</label>
+                            <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden">
+                                <button id="btnMinus" class="w-10 h-10 bg-gray-50 hover:bg-gray-200 text-gray-700 font-bold text-xl flex justify-center items-center transition-colors">-</button>
+                                <input type="number" id="qtyInput" value="1" min="1" class="w-14 h-10 text-center font-extrabold text-lg bg-white border-x border-gray-200 outline-none pointer-events-none">
+                                <button id="btnPlus" class="w-10 h-10 bg-gray-50 hover:bg-gray-200 text-gray-700 font-bold text-xl flex justify-center items-center transition-colors">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                        <div>
+                            <p class="text-base font-bold text-gray-500 uppercase tracking-wider mb-2">Estimated Total</p>
+                            <p class="text-5xl font-black text-gray-900">Rs <span id="priceValue">1499</span></p>
+                            
+                            <p id="shippingStatus" class="mt-3 text-sm font-semibold">
+                                </p>
+                        </div>
+                        
+                        <a id="proceedButton" href="proceed.html" class="w-full sm:w-auto text-center bg-brand hover-bg-brand text-white px-10 py-5 rounded-xl font-bold text-lg transition-colors shadow-xl shadow-teal-900/30 mt-4 sm:mt-0">
+                            PROCEED <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 rounded-3xl h-[600px] border border-gray-200 shadow-inner relative flex items-center justify-center p-8 overflow-hidden bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]">
+                    
+                    <div class="absolute w-[400px] h-[400px] border-2 border-gray-300/80 rounded-lg flex items-end justify-center pointer-events-none bg-[url('./images/build_plate_bg.jpg')] bg-cover bg-center shadow-sm overflow-hidden">
+                        <div class="absolute inset-0 bg-white/70"></div>
+                        <span class="absolute top-4 text-gray-500 text-sm font-extrabold uppercase tracking-widest bg-white/90 px-4 py-2 rounded-full shadow-md z-10">Max Build Volume (25cm)</span>
+                    </div>
+
+                    <div id="visualizerBox" class="relative border-4 border-dashed border-brand bg-brand/10 transition-all duration-200 ease-out origin-bottom flex items-end justify-center z-20" style="width: 160px; height: 160px;">
+                        
+                        <img src="./images/Product/raju.png" alt="3D Bust Scale" class="h-full w-auto object-contain mix-blend-multiply opacity-90 p-2 pointer-events-none drop-shadow-xl">
+                        
+                        <div class="absolute -top-8 left-0 w-full text-center">
+                            <span class="bg-white px-3 py-1 rounded text-brand text-sm font-bold shadow-md border border-brand/20">W: <span id="widthLabel">10</span>cm</span>
+                        </div>
+                        
+                        <div class="absolute top-1/2 -right-20 -translate-y-1/2">
+                            <span class="bg-white px-3 py-1 rounded text-brand text-sm font-bold shadow-md border border-brand/20">H: <span id="heightLabel">10</span>cm</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const slider = document.getElementById('dimensionSlider');
+        const sizeDisplay = document.getElementById('sizeValue');
+        const cubeDisplay = document.getElementById('cubeValue');
+        const priceDisplay = document.getElementById('priceValue');
+        const shippingStatus = document.getElementById('shippingStatus');
+        
+        // Quantity Elements
+        const qtyInput = document.getElementById('qtyInput');
+        const btnMinus = document.getElementById('btnMinus');
+        const btnPlus = document.getElementById('btnPlus');
+
+        // Proceed Button element
+        const proceedButton = document.getElementById('proceedButton');
+
+        // Bounding Box Elements
+        const visualizerBox = document.getElementById('visualizerBox');
+        const widthLabel = document.getElementById('widthLabel');
+        const heightLabel = document.getElementById('heightLabel');
+
+        // Scaling factor: 1 cm = 16 pixels
+        const pixelsPerCm = 16; 
+
+        // Handle Quantity Buttons
+        btnMinus.addEventListener('click', () => {
+            let currentVal = parseInt(qtyInput.value);
+            if(currentVal > 1) {
+                qtyInput.value = currentVal - 1;
+                updateCalculator();
+            }
+        });
+
+        btnPlus.addEventListener('click', () => {
+            let currentVal = parseInt(qtyInput.value);
+            qtyInput.value = currentVal + 1;
+            updateCalculator();
+        });
+
+        function updateCalculator() {
+            const currentSize = parseInt(slider.value);
+            const currentQty = parseInt(qtyInput.value);
+            
+            // 1. Update text displays
+            sizeDisplay.textContent = currentSize;
+            cubeDisplay.textContent = `${currentSize} cm × ${currentSize} cm × ${currentSize} cm`;
+            widthLabel.textContent = currentSize;
+            heightLabel.textContent = currentSize;
+
+            // 2. Update the Bounding Box Scale
+            const boxPixelSize = currentSize * pixelsPerCm; 
+            visualizerBox.style.height = `${boxPixelSize}px`;
+            visualizerBox.style.width = `${boxPixelSize}px`;
+
+            // 3. Calculate Unit Price
+            const basePrice = 499;
+            const extraCostPerCm = 200; 
+            const sizeDifference = currentSize - 5; 
+            const unitPrice = basePrice + (sizeDifference * extraCostPerCm);
+
+            // 4. Calculate Total Price (Unit Price * Quantity)
+            const totalPrice = unitPrice * currentQty;
+            priceDisplay.textContent = totalPrice.toLocaleString('en-IN'); 
+
+            // 5. Dynamic Shipping Logic
+            if(totalPrice >= 1000) {
+                shippingStatus.innerHTML = '<span class="text-brand font-bold"><i class="fa-solid fa-truck-fast mr-1"></i> Free Shipping Applied</span>';
+            } else {
+                shippingStatus.innerHTML = '<span class="text-gray-500">+ Shipping</span> <span class="bg-green-100 text-brand px-2 py-0.5 rounded-full ml-2 text-[10px] uppercase tracking-wider font-bold">Free over Rs 1000</span>';
+            }
+
+            // ADDED: Dynamically update the Proceed link href destination parameters
+            proceedButton.href = `proceed.html?total=${totalPrice}`;
+        }
+
+        slider.addEventListener('input', updateCalculator);
+        updateCalculator(); // Run on load
+    </script>
+</body>
+</html>
