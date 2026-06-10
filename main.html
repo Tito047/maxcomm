@@ -16,16 +16,13 @@
 </head>
 <body class="text-gray-800 antialiased overflow-x-hidden">
 
-    <!-- Sticky Navigation Bar -->
     <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
-            <!-- Header Logo Links to Home Page -->
-            <a href="main.html" class="flex flex-col leading-none hover:opacity-80 transition-opacity">
+            <a href="main.html" class="flex flex-col leading-none hover:opacity-80 transition-opacity z-50">
                 <span class="font-extrabold text-2xl tracking-tight text-gray-900 uppercase">Maxcomm</span>
                 <span class="text-[10px] font-bold tracking-widest text-gray-600 uppercase mt-1">Mechanical Solutions</span>
             </a>
             
-            <!-- Updated Navigation Taskbar Buttons (Portfolio and USP Removed) -->
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-gray-600">
                 <a href="main.html" class="text-gray-900 border-b-2 border-brand pb-1">Home</a>
                 <a href="Our_process.html" class="hover:text-gray-900 transition-colors">Our Process</a>
@@ -34,14 +31,38 @@
                 <a href="Testimonials.html" class="hover:text-gray-900 transition-colors">Testimonials</a>
             </div>
 
-            <!-- Get Quote Call To Action Link -->
-            <a href="quote.html" class="inline-block text-center bg-brand hover-bg-brand text-white px-6 py-2.5 rounded-md font-bold text-sm transition-colors shadow-md">
-                GET QUOTE
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="quote.html" class="hidden md:inline-block text-center bg-brand hover-bg-brand text-white px-6 py-2.5 rounded-md font-bold text-sm transition-colors shadow-md">
+                    GET QUOTE
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-800 focus:outline-none z-50">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Showcase Section -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden transition-opacity duration-300 opacity-0"></div>
+
+    <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-64 bg-white shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-6">
+        <button id="close-menu-btn" class="self-end text-2xl text-gray-600 mb-8 focus:outline-none hover:text-brand transition-colors">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="flex flex-col space-y-6 text-base font-semibold text-gray-800">
+            <a href="main.html" class="text-brand border-b border-brand pb-2 inline-block w-max">Home</a>
+            <a href="Our_process.html" class="hover:text-brand transition-colors">Our Process</a>
+            <a href="FAQ.html" class="hover:text-brand transition-colors">FAQ</a>
+            <a href="Contact.html" class="hover:text-brand transition-colors">Contact</a>
+            <a href="Testimonials.html" class="hover:text-brand transition-colors">Testimonials</a>
+        </div>
+
+        <a href="quote.html" class="mt-auto text-center bg-brand hover:bg-[#13524e] text-white px-6 py-4 rounded-xl font-bold text-sm transition-colors shadow-lg">
+            GET QUOTE
+        </a>
+    </div>
+
     <section class="relative bg-gradient-to-br from-white to-gray-100 overflow-hidden">
         <div class="container mx-auto px-6 py-16 md:py-24 max-w-7xl flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2 z-10">
@@ -64,7 +85,6 @@
         </div>
     </section>
 
-    <!-- Process Flow Information Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-7xl">
             <h2 class="text-3xl font-extrabold text-center mb-16 text-gray-900">The Maxcomm Process</h2>
@@ -110,7 +130,6 @@
         </div>
     </section>
 
-    <!-- Value Propositions Checklist Section -->
     <section class="py-16 bg-gray-50 border-t border-gray-200">
         <div class="container mx-auto px-6 max-w-7xl">
             <h2 class="text-3xl font-extrabold text-center mb-12 text-gray-900">Unmatched Quality & Precision</h2>
@@ -147,5 +166,33 @@
         </div>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const mobileDrawer = document.getElementById('mobile-drawer');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+
+            function toggleMobileMenu() {
+                // Toggle the drawer sliding in and out
+                mobileDrawer.classList.toggle('translate-x-full');
+                
+                // Toggle the dark overlay background
+                if (mobileOverlay.classList.contains('hidden')) {
+                    mobileOverlay.classList.remove('hidden');
+                    // Tiny timeout allows the display:block to apply before fading in
+                    setTimeout(() => mobileOverlay.classList.remove('opacity-0'), 10);
+                } else {
+                    mobileOverlay.classList.add('opacity-0');
+                    setTimeout(() => mobileOverlay.classList.add('hidden'), 300);
+                }
+            }
+
+            // Event Listeners
+            if (mobileBtn) mobileBtn.addEventListener('click', toggleMobileMenu);
+            if (closeBtn) closeBtn.addEventListener('click', toggleMobileMenu);
+            if (mobileOverlay) mobileOverlay.addEventListener('click', toggleMobileMenu); 
+        });
+    </script>
 </body>
 </html>
