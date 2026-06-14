@@ -192,12 +192,11 @@
             // 3. Calculate Unit Price
             const basePrice = 499;
             const extraCostPerCm = 200; 
-            // MODIFIED: Shifted baseline size calculation down to 4 to match new minimum
             const sizeDifference = currentSize - 4; 
             const baseCalculatedPrice = basePrice + (sizeDifference * extraCostPerCm);
             
-            // MODIFIED: Multiplying final unit price by 2
-            const unitPrice = baseCalculatedPrice * 2;
+            // MODIFIED: Multiplying final unit price by 0.7 and rounding to nearest whole number
+            const unitPrice = Math.round(baseCalculatedPrice * 0.7);
 
             // 4. Calculate Total Price (Unit Price * Quantity)
             const totalPrice = unitPrice * currentQty;
