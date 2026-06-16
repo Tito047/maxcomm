@@ -156,7 +156,7 @@
         const widthLabel = document.getElementById('widthLabel');
         const heightLabel = document.getElementById('heightLabel');
 
-        // Scaling factor: increased to 20 pixels per cm so 20cm = 400px (fills the background box)
+        // Scaling factor: 20 pixels per cm so 20cm = 400px (fills the background box)
         const pixelsPerCm = 20; 
 
         // Handle Quantity Buttons
@@ -189,16 +189,17 @@
             visualizerBox.style.height = `${boxPixelSize}px`;
             visualizerBox.style.width = `${boxPixelSize}px`;
 
-            // 3. Calculate Unit Price (EXPONENTIAL MATH)
-            const basePrice = 499; 
-            const growthFactor = 1.7; // 70% price jump per size step
-            const stepIndex = (currentSize - 4) / 3; // Calculates which slider "step" we are on (0 to 4)
+            // 3. Exact Pricing Dictionary Mapping
+            const exactPrices = {
+                4: 499,
+                7: 999,
+                10: 1499,
+                13: 2199, // Middle step calculated logically
+                16: 2999
+            };
             
-            // Exponential formula: BasePrice * (GrowthFactor ^ Steps)
-            const baseCalculatedPrice = basePrice * Math.pow(growthFactor, stepIndex);
-            
-            // Applying your 0.7 multiplier and rounding to a clean whole number
-            const unitPrice = Math.round(baseCalculatedPrice * 0.9);
+            // Fetch the exact price based on slider size (defaults to 499 if something goes wrong)
+            const unitPrice = exactPrices[currentSize] || 499;
 
             // 4. Calculate Total Price (Unit Price * Quantity)
             const totalPrice = unitPrice * currentQty;
